@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>RSS 链接转换器</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 20px; }
+        .container { background-color: #f5f5f5; padding: 20px; border-radius: 8px; }
+        h2 { color: #333; }
+        input[type="text"], input[type="file"] { width: 100%; padding: 8px; margin: 5px 0; }
+        input[type="submit"] { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; }
+        .note { background-color: #e9f7ef; padding: 10px; border-radius: 4px; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>RSS 链接转换器</h2>
+        <form method="post" enctype="multipart/form-data">
+            <label>输入 RSS URL:</label>
+            <input type="text" name="rss_url" placeholder="https://example.com/rss-feed"><br><br>
+            
+            <label>或上传 XML 文件:</label>
+            <input type="file" name="rss_file"><br><br>
+            
+            <input type="submit" value="生成永久 RSS 链接">
+        </form>
+        
+        <div class="note">
+            <h3>功能说明：</h3>
+            <ul>
+                <li>自动将 RSS 中的链接替换为 Telegraph 永久链接</li>
+                <li>清理标题中的多余链接</li>
+                <li>每 30 分钟自动更新内容</li>
+                <li>生成的 RSS 地址永久有效</li>
+                <li>重启后自动恢复所有任务</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
